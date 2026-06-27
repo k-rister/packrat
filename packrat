@@ -317,9 +317,9 @@ function collect_kernel_info() {
 	    if pushd "${GROUP}" > /dev/null; then
 		local FILE=""
 		for FILE in $(find . -type f); do
-		    append_str "${GROUP}/$(clean_path ${FILE}):" "${CLOCKSOURCE_FILE}"
-		    append_file "${FILE}" "${CLOCKSOURCE_FILE}"
-		    append_str "" "${CLOCKSOURCE_FILE}"
+		    append_str "${GROUP}/$(clean_path ${FILE}):" "${IOMMU_FILE}"
+		    append_file "${FILE}" "${IOMMU_FILE}"
+		    append_str "" "${IOMMU_FILE}"
 		done
 
 		popd > /dev/null
